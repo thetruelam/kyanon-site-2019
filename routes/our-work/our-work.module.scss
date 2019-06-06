@@ -1,0 +1,74 @@
+.ourwork {
+  background-image: url('/static/page-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+.wrapOuter {
+  width: 95%;
+  margin: 20vh auto;
+}
+.pageTitle {
+  text-align: center;
+  font-weight: 900;
+  font-size: 3em;
+}
+.wrapItem {
+  width: 100% * 1/3;
+  color: white;
+}
+.img {
+  width: 100%;
+  transform: scaleY(1.02);
+}
+.hover {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(239, 62, 59, 0.8);
+  transform: scaleY(1.02);
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+.hover:hover {
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+.innerHover {
+  flex-grow: 1;
+  margin: 0 5%;
+}
+.wrapCenter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.num {
+  font-size: 1.4em;
+  font-weight: 900;
+  margin-bottom: 0.5em;
+  text-decoration: underline;
+}
+.wrapImg {
+  text-align: center;
+}
+.title {
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.5em;
+}
+.cp {
+  text-align: center;
+  font-weight: 700;
+}

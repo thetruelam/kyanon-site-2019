@@ -1,0 +1,166 @@
+{
+  "homepage": {
+    "data": {
+      "homepage": {
+        "homesection1": {
+          "homesection1contact": {
+            "imgPath": {
+              "url": "/uploads/bf5aba926987401eb0cb3cadade20e8e.png"
+            }
+          },
+          "homesection1followus": {
+            "text": "Follow us",
+            "clickUrl": "#",
+            "imgPath": {
+              "url": "/uploads/4f476ec93da94fc59fae6487e333af70.png"
+            }
+          },
+          "homesection1logo": {
+            "imgPath": {
+              "url": "/uploads/fc6e78dbc8184a37b22275deb5722a38.png"
+            }
+          },
+          "homesection1slider": {
+            "homesection1slideitems": [
+              {
+                "titleText": "An agile software development house",
+                "descriptionText": "Kyanon Digital is a fast growing, nimble, and innovative digital                production house.                <br />                In Vietnam, we are a leader in the Agile movement.",
+                "htmlEditor": "<div style=\"position: relative; font-size: 150px\" >        <p          style=\"            margin: 0;            font-weight: 900;            position: relative;            z-index: 1;          \"        >          KYAN&nbsp;&nbsp;&nbsp;N        </p>        <img          style=\"            position: absolute;            transform: translate(-50px, -290px);            width: 400px;            z-index: -1          \"          src=\"/static/target.png\"        />      </div>      <div        style=\"          position: relative;          width: 100vw;          overflow: hidden;          transform: translate(-75px, -30px);          align-self: flex-end        \"      >        <p          style=\"            margin: 0;            font-weight: 900;            position: relative;            right: -240px;            font-size: 28px;            letter-spacing: 1.2em          \"        >          DIGITAL        </p>      </div>",
+                "imgBackgroundPath": {
+                  "url": "/uploads/51f25278c109407089c58aac3c909910.png"
+                }
+              },
+              {
+                "titleText": "An agile software development house",
+                "descriptionText": "Kyanon Digital is a fast growing, nimble, and innovative digital                production house.                <br />                In Vietnam, we are a leader in the Agile movement.",
+                "htmlEditor": "<div style=\"position: relative; font-size: 150px\" >        <p          style=\"            margin: 0;            font-weight: 900;            position: relative;            z-index: 1;          \"        >          KYAN&nbsp;&nbsp;&nbsp;N        </p>        <img          style=\"            position: absolute;            transform: translate(-50px, -290px);            width: 400px;            z-index: -1          \"          src=\"/static/target.png\"        />      </div>      <div        style=\"          position: relative;          width: 100vw;          overflow: hidden;          transform: translate(-75px, -30px);          align-self: flex-end        \"      >        <p          style=\"            margin: 0;            font-weight: 900;            position: relative;            right: -240px;            font-size: 28px;            letter-spacing: 1.2em          \"        >          DIGITAL        </p>      </div>",
+                "imgBackgroundPath": {
+                  "url": "/uploads/51f25278c109407089c58aac3c909910.png"
+                }
+              }
+            ]
+          },
+          "homescrolltoexplore": {
+            "text": "Scroll to explore"
+          }
+        },
+        "homesection2": {
+          "homesection2weare": {
+            "title": "We are",
+            "leftText": "A tribe of agile practitioners who value individuals and interactions, embrace changes and continuous improvement",
+            "rightText": "Applying best practices from Scrum and XP, we are committed to our client’s success with focus, commitment, openness and respect."
+          },
+          "homesection2bynumber": {
+            "text": "By numbers"
+          },
+          "homesection2slider": {
+            "homesection2slideitems": [
+              {
+                "text": "Years of experience",
+                "number": "10",
+                "isPlus": false
+              },
+              {
+                "text": "People in 2 countries",
+                "number": "150",
+                "isPlus": true
+              },
+              {
+                "text": "Clients around the world",
+                "number": "200",
+                "isPlus": true
+              }
+            ]
+          },
+          "homescrolltoexplore": {
+            "text": "KYANON BY NUMBERS"
+          }
+        }
+      }
+    }
+  },
+  "pagecontact": {
+    "data": {
+      "pagecontact": {
+        "contactsection1": {
+          "contactsection1intro": {
+            "textFront1": "Let’s start mapping your digital success",
+            "textFront2": "Anywhere within Vietnam and Singapore",
+            "textBehind": "Success",
+            "imgPath": {
+              "url": "/uploads/ec7b4cb3223c4477b9267e0a2dda5436.png"
+            }
+          }
+        },
+        "contactsection2": {
+          "contactsection2link": {
+            "clickUrl": "#",
+            "text": "Browse Jobs in Vietnam"
+          },
+          "contactsection2office": [
+            {
+              "title": "Head office:",
+              "detail": "231 -233 Le Thanh Ton, Ben Thanh, District 1, Ho Chi Minh City",
+              "mapUrl": "#"
+            },
+            {
+              "detail": "3rd floor, Song Huong Cafe, 294 -296 Truong Sa, Phu Nhuan, \nHo Chi Minh City",
+              "mapUrl": "#"
+            }
+          ],
+          "contactsection2contact": [
+            {
+              "title": "Phone:",
+              "detail": "(+84) 283 5171 081"
+            },
+            {
+              "title": "Email:",
+              "detail": "contact@kyanon.digital"
+            }
+          ],
+          "contactsection2imagelist": {
+            "imgList": [
+              {
+                "url": "/uploads/e14d46382c914abf84e6014bef298797.png"
+              },
+              {
+                "url": "/uploads/4825c9188f844d498d121e1ff0562224.png"
+              },
+              {
+                "url": "/uploads/7db18f62fccc432f9d13281aa1d1062f.png"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "menu": {
+    "data": {
+      "menu": {
+        "menuitems": [
+          {
+            "clickUrl": "/",
+            "text": "Home"
+          },
+          {
+            "clickUrl": "/about-us",
+            "text": "About Us"
+          },
+          {
+            "clickUrl": "/our-work",
+            "text": "Our Work"
+          },
+          {
+            "clickUrl": "/career",
+            "text": "CAREERS"
+          },
+          {
+            "clickUrl": "/contact-us",
+            "text": "Contact Us"
+          }
+        ]
+      }
+    }
+  }
+}

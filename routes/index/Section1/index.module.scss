@@ -1,0 +1,16 @@
+.kv {
+  overflow-x: hidden;
+  position: relative;
+}
+.followus {
+  position: absolute;
+  bottom: 8vh;
+  left: 4.6vw;
+  z-index: 999;
+}
+.fixedPageIndicator {
+  position: absolute;
+  bottom: 8vh;
+  width: 100vw;
+  z-index: 999;
+}

@@ -1,0 +1,95 @@
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  background: black url('/static/menu_patten.png');
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: -99;
+}
+.ulList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 325px;
+}
+.liItem {
+  background: url('/static/move-arrow.png');
+  background-repeat: no-repeat;
+  background-position-x: -325px;
+  background-position-y: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-position-x 0.5s;
+  text-transform: uppercase;
+}
+.liItem:hover {
+  background-position-x: center;
+}
+.liItem:before {
+  content: '';
+  background: url('/static/arrow-feather.png');
+  width: 20px;
+  height: 18px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 0;
+  z-index: -1;
+}
+.liItem:after {
+  content: '';
+  background: url('/static/arrow-head.png');
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 0;
+  z-index: -1;
+}
+.closeBtn {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 999;
+  cursor: pointer;
+}
+/*CSSTransition*/
+.menu-enter {
+  transform: translateX(100vw);
+}
+.menu-enter-active {
+  transform: translateX(0);
+  transition: transform 0.5s;
+}
+.menu-enter-done {
+  transform: translateX(0);
+}
+.menu-exit {
+  transform: translateX(0);
+}
+.menu-exit-active {
+  transform: translateX(100vw);
+  transition: transform 0.5s;
+}
+.menu-exit-done {
+  transform: translateX(100vw);
+}
+.defaultA {
+  text-decoration: none;
+  color: inherit;
+}

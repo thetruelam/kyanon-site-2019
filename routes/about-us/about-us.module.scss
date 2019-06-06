@@ -1,0 +1,35 @@
+.aboutUs {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+.wrapScrollBar {
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  margin-left: 2vw;
+  align-items: center;
+  z-index: 999;
+}
+.wrapBottomTitle {
+  position: fixed;
+  bottom: 3vh;
+  width: 100%;
+}
+.scrollBar {
+  height: 50%;
+  transform: translateY(10vh);
+}
+.swiper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.wrapScrollBottom {
+  position: fixed;
+  bottom: 0px;
+  right: 3.125vw;
+  z-index: 999;
+}

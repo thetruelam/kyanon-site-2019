@@ -1,0 +1,26 @@
+.bottomIndicator {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.pageIndicator {
+  position: absolute;
+  transform: translateY(-1.5vw);
+  font-size: 2.4vw;
+  font-family: 'Six Caps', sans-serif;
+}
+.img {
+  width: 5.7vw;
+  border: 1px solid #000;
+}
+.current {
+  color: #cf403d;
+  text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff,
+    1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+.max {
+  color: #fff;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000,
+    1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}

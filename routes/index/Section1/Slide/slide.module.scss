@@ -1,0 +1,92 @@
+$widthCta: 14vw;
+$vw100: 100vw;
+%margin0 {
+  margin: 0;
+}
+.flexWrap {
+  display: flex;
+}
+
+.background {
+  // background-image: url('/static/background.png');
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.wrapText {
+  transform: translateY(-25px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.wrapKyanon {
+  position: relative;
+  font-size: 150px;
+  // overflow-x: hidden;
+}
+.kyanon {
+  margin: 0;
+  font-weight: 900;
+  position: relative;
+  z-index: 1;
+}
+.targetImg {
+  position: absolute;
+  transform: translate(-50px, -290px);
+  width: 400px;
+  z-index: -1;
+}
+.sloganSub {
+  z-index: 1;
+  font-weight: 400;
+  font-size: 0.9vw;
+  // @media screen and (max-width: 768px) {
+  //   font-size: 6.9px;
+  // }
+  line-height: 30px;
+}
+.wrapDigital {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  transform: translate(-75px, -30px);
+  align-self: flex-end;
+}
+.digital {
+  margin: 0;
+  font-weight: 900;
+  position: relative;
+  right: -240px;
+  font-size: 28px;
+  letter-spacing: 1.2em;
+}
+.sloganTitle {
+  @extend %margin0;
+  font-weight: 800;
+  font-size: 2vw;
+  // @media screen and (max-width: 768px) {
+  //   font-size: 15px;
+  // }
+  z-index: 1;
+}
+.cta {
+  width: $widthCta;
+  height: $widthCta * 0.3;
+  line-height: $widthCta * 0.3;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #fff;
+  font-weight: 900;
+  font-size: 1.25vw;
+  cursor: pointer;
+  .blackColor {
+    color: #000;
+  }
+  .redColor {
+    color: #ef3e3a;
+  }
+}

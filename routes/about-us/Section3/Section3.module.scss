@@ -1,0 +1,34 @@
+.section3 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.wrapMasonry {
+  width: 80%;
+  height: 60%;
+}
+.wrapImg {
+  width: 20%;
+  margin: 20px;
+  position: relative;
+}
+.img {
+  width: 100%;
+}
+.text {
+  position: absolute;
+  top: -10%;
+  width: 50%;
+  right: -30%;
+}
+.num {
+  color: #ef3e3b;
+  font-size: 3rem;
+  font-weight: 900;
+}
+.des {
+  font-weight: 700;
+}

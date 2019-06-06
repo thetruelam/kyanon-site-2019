@@ -1,0 +1,33 @@
+.divFlex {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  // position: fixed;
+  width: 100vw;
+  z-index: 999;
+  .menu {
+    margin-left: 2vw;
+    .menuImg {
+      height: 6vw;
+      cursor: pointer;
+    }
+  }
+  .logo {
+    margin-left: 2vw;
+    .logoImg {
+      cursor: pointer;
+      height: 6vw;
+    }
+  }
+  .contact {
+    flex: 1 0 0;
+    align-self: center;
+    display: flex;
+    .contactImg {
+      cursor: pointer;
+      height: 4vw;
+      margin-left: auto;
+      margin-right: 2vw;
+    }
+  }
+}
