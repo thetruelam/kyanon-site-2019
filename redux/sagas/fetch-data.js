@@ -1,15 +1,15 @@
 import { fetchData as fetchDataConst } from '../const'
 import { all, call, takeLatest, put } from 'redux-saga/effects'
 import { fetchData as fetchDataAction } from '../actions'
-import ApolloClient from 'apollo-boost'
-import gql from 'graphql-tag'
+// import ApolloClient from 'apollo-boost'
+// import gql from 'graphql-tag'
 import json from '../../query.json'
 
 function* homepageFetchData(action) {
   try {
-    const client = new ApolloClient({
-      uri: action.apiUrl
-    })
+    // const client = new ApolloClient({
+    //   uri: action.apiUrl
+    // })
     const res = json.homepage
     /*const res = yield call(client.query, {
       query: gql`
@@ -69,9 +69,9 @@ function* watchHomePageFetchData() {
 /* Lý Thành */
 function* contactFetchData(action) {
   try {
-    const client = new ApolloClient({
-      uri: action.apiUrl
-    })
+    // const client = new ApolloClient({
+    //   uri: action.apiUrl
+    // })
     const res = json.pagecontact
     /*const res = yield call(client.query, {
       query: gql`
@@ -134,9 +134,9 @@ function* watchContactFetchData() {
 //menu
 function* menuFetchData(action) {
   try {
-    const client = new ApolloClient({
-      uri: action.apiUrl
-    })
+    // const client = new ApolloClient({
+    //   uri: action.apiUrl
+    // })
     const res = json.menu
     /*const res = yield call(client.query, {
       query: gql`
