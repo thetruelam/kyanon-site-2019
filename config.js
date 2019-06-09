@@ -1,4 +1,4 @@
 const config = {
-  BACKEND_DOMAIN: 'http://localhost:1337'
+  BACKEND_DOMAIN: 'https://kyanonsite-be.herokuapp.com/'
 }
 export default config

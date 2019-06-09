@@ -16,9 +16,7 @@ export default class extends Component {
     data.map((item, index) => {
       let itemLayout = {}
       const Layout = dynamic(import(`../routes/${item.sectionLayout}`))
-      itemLayout['Layout'] = Layout
-      
-      
+      itemLayout['Layout'] = Layout 
       fetch(`https://kyanonsite-be.herokuapp.com/sections?id=${item._id}`, {
         method: "GET",
         headers: {
