@@ -2,8 +2,9 @@ import styles from './section1.module.scss'
 import { connect } from 'react-redux'
 import config from "../../config"
 import React, { Component, useEffect, useState } from 'react'
-let data = null
+
 class Section1 extends Component {
+  state = {data:null}
   componentDidMount() {
     fetch(`${config.BACKEND_DOMAIN}sectiondetails?id=${this.props.idSection}`, {
       method: "GET",
@@ -13,24 +14,30 @@ class Section1 extends Component {
       }
     }).then(response => { return response.json() })
       .then(res => {
-        data = res.detailJson
+        this.setState({
+          data = res[0].detailJson
+        })
         console.log(">>>>>", res)
       })
   }
   render() {
+    if(!this.state.data)
+    {
+      return (<></>)
+    }
     return (
       <div className={`${this.props.className} section1`}>
         <div className={styles.wrap}>
           <div className={styles.leftBlock}>
-            {/* <div className={styles.textFront1}>
-            {data.F1}
+            <div className={styles.textFront1}>
+            {data.textFront1}
           </div>
           <div className={styles.textFront2}>
-            {data.F2}
+            {data.textFront2}
           </div>
           <div className={styles.textBehind}>
-            {data.F3}
-          </div> */}
+            {data.textBehind}
+          </div>
             <div
               onClick={() => this.props.slideTo(1)}
               className={styles.contactLocation}
@@ -44,7 +51,7 @@ class Section1 extends Component {
           <div className={styles.rightBlock}>
             <img
               className={styles.img}
-              src={'/static/contact-map.png'}
+              src={`${data.mapUrl}`}
               //src={`${props.backendDomain + props.section1.intro.imgPath.url}`}
               alt=""
             />
