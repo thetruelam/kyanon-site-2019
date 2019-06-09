@@ -1,0 +1,25 @@
+.flexBox {
+  display: flex;
+  font-weight: 700;
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.text {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 2.3vh;
+}
+.verticalLine {
+  margin-bottom: 2.3vh;
+  margin-top: 2.3vh;
+  height: 7.4vh;
+  border: 1px #fff solid;
+}
+.linkedin {
+  cursor: pointer;
+}
+.linkedinImg {
+  height: 2.7vh;
+}

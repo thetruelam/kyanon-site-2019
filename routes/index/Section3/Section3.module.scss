@@ -1,0 +1,17 @@
+.section3 {
+  display: flex;
+  justify-content: center;
+}
+.slide {
+  width: 78%;
+  height: 65vh;
+  position: absolute;
+  bottom: 15vh;
+  background: gray;
+}
+.title {
+  position: relative;
+  font-size: 2.5em;
+  font-weight: 900;
+  top: 10vh;
+}

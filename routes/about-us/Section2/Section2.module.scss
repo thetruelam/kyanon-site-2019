@@ -1,0 +1,102 @@
+.section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.title {
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin: 0;
+}
+.redTitle {
+  color: #cf403d;
+  font-size: 2.8rem;
+  margin: 0;
+}
+.blackTitle {
+  margin: 0;
+}
+.wrapSlide {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.swiper {
+  width: 80%;
+}
+.wrapImg {
+  position: relative;
+  flex: 1 1 50%;
+  width: auto;
+  margin-top: 5vh;
+  transform: translateX(2.5vw);
+}
+.img {
+  width: 100%;
+}
+.wrapContent {
+  flex: 1 1 50%;
+  box-shadow: -1px 10px 17px 0 rgba(136, 134, 146, 0.5);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 2;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 5vh;
+  transform: translateX(-2.5vw);
+}
+.contentTitle {
+  margin-left: 8%;
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+.slideIndicator {
+  display: flex;
+  position: absolute;
+  z-index: 999;
+  bottom: 30vh;
+  justify-content: center;
+  right: 15vw;
+  font-weight: 900;
+  font-size: 1.25rem;
+  line-height: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+.numIndicator {
+  margin-right: 30px;
+}
+.gray {
+  color: #acacac;
+}
+.prev {
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid red;
+  text-align: center;
+  font-size: 2rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.next {
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid red;
+  text-align: center;
+  font-size: 2rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.ul {
+  padding-right: 5%;
+  list-style-image: url('/static/about-us/arrowli.png');
+}
