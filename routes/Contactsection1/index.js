@@ -27,6 +27,7 @@ class Section1 extends Component {
     {
       return (<></>)
     }
+    const {data} = this.state
     return (
       <div className={`${this.props.className} section1`}>
         <div className={styles.wrap}>
