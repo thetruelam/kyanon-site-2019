@@ -4,7 +4,9 @@ import config from "../../config"
 import React, { Component, useEffect, useState } from 'react'
 
 class Section1 extends Component {
-  state = {data:null}
+  state = {
+    data:null
+  }
   componentDidMount() {
     fetch(`${config.BACKEND_DOMAIN}sectiondetails?id=${this.props.idSection}`, {
       method: "GET",
@@ -15,7 +17,7 @@ class Section1 extends Component {
     }).then(response => { return response.json() })
       .then(res => {
         this.setState({
-          data = res[0].detailJson
+          data:res[0].detailJson
         })
         console.log(">>>>>", res)
       })
