@@ -1,0 +1,28 @@
+.fixedNav {
+  position: fixed;
+  top: 35px;
+  z-index: 9999;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+}
+// .fixedWrapRightSide {
+//   position: fixed;
+//   height: 100vh;
+//   align-items: center;
+//   display: flex;
+//   right: 0px;
+//   justify-content: flex-end;
+//   z-index: 998;
+// }
+// .fixedRightSideText {
+//   margin-right: 3.9vw;
+// }
+// .fixedWrapScrollBottom {
+//   position: fixed;
+//   bottom: 0px;
+//   right: 3.125vw;
+//   z-index: 999;
+// }

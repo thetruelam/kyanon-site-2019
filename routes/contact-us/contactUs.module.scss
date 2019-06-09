@@ -1,0 +1,30 @@
+.background {
+  background: url('/static/page-bg.png') center no-repeat fixed;
+  background-size: auto 200%;
+}
+.fixedWrapScrollBottom {
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
+}
+.getInTouch {
+  margin-bottom: 0vh;
+}
+.wrapScrollBar {
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  margin-left: 2vw;
+  z-index: 999;
+}
+.scrollBar {
+  height: 30%;
+  transform: translateY(5vh);
+}
+.swiper {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}

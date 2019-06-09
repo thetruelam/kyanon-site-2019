@@ -1,0 +1,19 @@
+.byNumber {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fixedBottom {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  position: absolute;
+  bottom: 0px;
+}
+.weAre {
+  width: 60vw;
+  position: absolute;
+  top: 8vw;
+  text-align: center;
+  transform: translateX(4vw);
+}

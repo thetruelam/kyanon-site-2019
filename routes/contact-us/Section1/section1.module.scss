@@ -1,0 +1,61 @@
+.wrap {
+  font-weight: 700;
+  font-size: 3.7vw;
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.textBehind {
+  font-size: 8.7vw;
+  position: absolute;
+  z-index: -1;
+  margin-left: 7vw;
+  font-weight: 900;
+  color: rgba(13, 13, 13, 0.15);
+  transform: translate(-1.5vw, -3vw);
+}
+.leftBlock {
+  flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 4vw;
+  position: relative;
+}
+.textFront1 {
+  margin-left: 7vw;
+  margin-right: 10vw;
+}
+.textFront2 {
+  color: #cf403d;
+  margin-left: 7vw;
+  margin-right: 15vw;
+  margin-top: 1vw;
+}
+.contactLocation {
+  position: absolute;
+  bottom: 0;
+  font-size: 1.2vw;
+  line-height: 1.5vw;
+  right: 7vw;
+  font-weight: 900;
+  cursor: pointer;
+}
+.rightBlock {
+  flex: 1 0 50%;
+  height: 29vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.img {
+  width: 100%;
+  height: auto;
+  transform: translateY(-2vw);
+}

@@ -1,0 +1,46 @@
+{
+  "name": "kyanonfrontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.13",
+    "@material-ui/core": "^3.9.2",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "apollo-boost": "^0.3.0",
+    "axios": "^0.18.0",
+    "classnames": "^2.2.6",
+    "graphql": "^14.1.1",
+    "graphql-tag": "^2.10.1",
+    "lodash": "^4.17.11",
+    "next": "^8.0.1",
+    "nextjs-dynamic-routes": "^2.5.1",
+    "node-sass": "^4.11.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "react-id-swiper": "2.0.0",
+    "react-masonry-component": "^6.2.1",
+    "react-modal": "^3.8.1",
+    "react-redux": "^6.0.0",
+    "react-slick": "^0.23.2",
+    "react-transition-group": "^2.6.0",
+    "redux": "^4.0.1",
+    "redux-saga": "^1.0.1",
+    "swipe-js-iso": "^2.1.5",
+    "swiper": "^4.5.0"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start -p 5000"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.14.0",
+    "eslint-plugin-react": "^7.12.4",
+    "stylelint": "^9.10.1",
+    "stylelint-config-recommended": "^2.1.0"
+  }
+}

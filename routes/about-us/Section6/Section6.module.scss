@@ -1,0 +1,66 @@
+.section6 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+.centerDiv {
+  width: 80%;
+  height: 80%;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.centerDiv:before {
+  content: '';
+  width: 70%;
+  height: 70%;
+  background-color: #fff;
+  position: absolute;
+  box-shadow: -1px 3px 17px 0 rgba(0, 0, 0, 0.5);
+}
+.wrapContent {
+  z-index: 999;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.375rem;
+  font-weight: 700;
+  width: 100%;
+}
+.title {
+  margin: 0 0 0 5%;
+  font-size: 7rem;
+  font-weight: 900;
+}
+.content {
+  margin-left: 10%;
+  width: 40%;
+}
+.button {
+  position: absolute;
+  bottom: 15%;
+  width: 15%;
+  height: 10%;
+  background-color: #f03e3a;
+  color: #fff;
+  box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.4);
+  line-height: 10vh;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.button:hover {
+  transform: scale(0.9);
+  transition: transform 0.3s;
+}
