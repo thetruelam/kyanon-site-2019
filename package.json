@@ -34,7 +34,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start -p 5000"
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
