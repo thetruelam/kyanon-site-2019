@@ -1,0 +1,107 @@
+.wrap {
+  font-weight: 700;
+  font-size: 3.7vw;
+  position: relative;
+  display: flex;
+  height: 100vh;
+
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  @media screen and(max-width:991px) {
+    height: auto;
+
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.textBehind {
+  font-size: 8.7vw;
+  position: absolute;
+  z-index: -1;
+  margin-left: 7vw;
+  font-weight: 900;
+  color: rgba(13, 13, 13, 0.15);
+  transform: translate(-1.5vw, -3vw);
+  @media screen and (max-width:991px) {
+    top: 42%;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: 0px;
+  }
+}
+.leftBlock {
+  flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 4vw;
+  position: relative;
+  @media screen and (max-width:991px) {
+    padding-top: 150px;
+    text-align: center;
+    flex: 0 0 100%;
+    line-height: 4vw;
+    position: relative;
+    display: inline-block;
+    &:after{
+      clear: both;
+      content: ".";
+      display: block;
+    }
+  }
+}
+.textFront1 {
+  margin-left: 7vw;
+  margin-right: 10vw;
+  @media screen and(max-width:991px) {
+    margin: 0px;
+    margin-bottom: 30px;
+    font-size: 70px;
+    line-height: 80px;
+  }
+}
+.textFront2 {
+  color: #cf403d;
+  margin-left: 7vw;
+  margin-right: 15vw;
+  margin-top: 1vw;
+  @media screen and(max-width:991px) {
+    margin: 0px;
+    margin-bottom: 30px;
+    font-size: 70px;
+    line-height: 80px;
+  }
+}
+.contactLocation {
+  position: absolute;
+  bottom: 0;
+  font-size: 1.2vw;
+  line-height: 1.5vw;
+  right: 7vw;
+  font-weight: 900;
+  cursor: pointer;
+  @media screen and(max-width:991px) {
+    left: 10%;
+  }
+}
+.rightBlock {
+  flex: 1 0 50%;
+  height: 29vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  @media screen and (max-width:991px) {
+    display: inline-block;
+    position: relative;
+    flex: 0px
+  }
+}
+// .img {
+//   width: 100%;
+//   height: auto;
+//   transform: translateY(-2vw);
+// }

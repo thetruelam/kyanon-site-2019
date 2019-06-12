@@ -10,6 +10,7 @@ import Menu from '../components/Menu'
 import dynamic from 'next/dynamic'
 import router, { Link as NewLink } from '../route'
 import config from "../config"
+import style from './normal.scss'
 class MyApp extends App {
   state = {
     listPage: [],
@@ -68,6 +69,7 @@ class MyApp extends App {
       <Container>
         <Head>
           <title>{'KYANON DIGITAL'}</title>
+          <style>{style}</style>
         </Head>
         <Provider store={reduxStore}>
           <Menu className={styles.menu} />
