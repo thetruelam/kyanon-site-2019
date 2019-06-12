@@ -8,9 +8,9 @@
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  @media screen and(max-width:991px) {
+  @media screen and(max-width:767px) {
     height: auto;
-
+    flex-direction: column;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -23,12 +23,13 @@
   font-weight: 900;
   color: rgba(13, 13, 13, 0.15);
   transform: translate(-1.5vw, -3vw);
-  @media screen and (max-width:991px) {
+  @media screen and (max-width:767px) {
     top: 42%;
     right: 0px;
     bottom: 0px;
     left: 0px;
     margin: 0px;
+    font-size: 30px;
   }
 }
 .leftBlock {
@@ -39,8 +40,9 @@
   justify-content: center;
   line-height: 4vw;
   position: relative;
-  @media screen and (max-width:991px) {
-    padding-top: 150px;
+
+  @media screen and (max-width:767px) {
+    padding-top: 70px;
     text-align: center;
     flex: 0 0 100%;
     line-height: 4vw;
@@ -52,15 +54,19 @@
       display: block;
     }
   }
+  @media screen and (min-width:568px) and (max-width:767px) {
+    padding-top:85px;
+    width: 70%;
+  }
 }
 .textFront1 {
   margin-left: 7vw;
   margin-right: 10vw;
-  @media screen and(max-width:991px) {
+  @media screen and(max-width:767px) {
     margin: 0px;
-    margin-bottom: 30px;
-    font-size: 70px;
-    line-height: 80px;
+    margin-bottom: 0px;
+    font-size: 25px;
+    line-height: 30px
   }
 }
 .textFront2 {
@@ -68,11 +74,11 @@
   margin-left: 7vw;
   margin-right: 15vw;
   margin-top: 1vw;
-  @media screen and(max-width:991px) {
+  @media screen and(max-width:767px) {
     margin: 0px;
     margin-bottom: 30px;
-    font-size: 70px;
-    line-height: 80px;
+    font-size: 25px;
+    line-height: 30px;
   }
 }
 .contactLocation {
@@ -83,8 +89,9 @@
   right: 7vw;
   font-weight: 900;
   cursor: pointer;
-  @media screen and(max-width:991px) {
+  @media screen and(max-width:767px) {
     left: 10%;
+    bottom: 10%;
   }
 }
 .rightBlock {
@@ -94,7 +101,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  @media screen and (max-width:991px) {
+  @media screen and (max-width:767px) {
     display: inline-block;
     position: relative;
     flex: 0px
