@@ -28,21 +28,21 @@ class Section1 extends Component {
     }
     const { data } = this.state
     return (
-      <div className={`${this.props.className} section1`}>
-        <div className={styles.wrap}>
-          <div className={styles.leftBlock}>
+      <div className={`row ${styles.section1}`}>
+        <div className={`${styles.leftBlock} col-12 col-sm-12 col-lg-6 col-xl-6`}>
+          <div className={`${styles.left__padding}`}>
             <p className={styles.textFront1}>
               {data.textFront1}
             </p>
             <p className={styles.textFront2}>
               {data.textFront2}
             </p>
-            <br/>
+            <br />
             <p className={styles.textBehind}>
               {data.textBehind}
             </p>
             <div
-              onClick={() => this.props.slideTo(1)}
+              // onClick={() => this.props.slideTo(1)}
               className={styles.contactLocation}
             >
               Contact <br /> &amp;{' '}
@@ -51,13 +51,13 @@ class Section1 extends Component {
               <img src="/static/down-arrow.png" />
             </div>
           </div>
-          <div className={styles.rightBlock}>
-            <img
-              className={styles.img}
-              src={`${data.mapUrl}`}
-              alt=""
-            />
-          </div>
+        </div>
+        <div className={`${styles.rightBlock} col-12 col-sm-12 col-lg-6 col-xl-6`}>
+          <img
+            className={styles.img}
+            src={`${data.mapUrl}`}
+            alt=""
+          />
         </div>
       </div>
     )

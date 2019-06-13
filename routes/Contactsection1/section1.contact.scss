@@ -8,107 +8,85 @@
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  @media screen and(max-width:767px) {
-    height: auto;
+}
+.section1 {
+  padding: 90px 0px;
+  @media screen and (max-width: 767px) {
+    padding: 80px 0px;
+  }
+  .leftBlock {
+    display: flex;
     flex-direction: column;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-.textBehind {
-  font-size: 8.7vw;
-  position: absolute;
-  z-index: -1;
-  margin-left: 7vw;
-  font-weight: 900;
-  color: rgba(13, 13, 13, 0.15);
-  transform: translate(-1.5vw, -3vw);
-  @media screen and (max-width:767px) {
-    top: 42%;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    margin: 0px;
-    font-size: 30px;
-  }
-}
-.leftBlock {
-  flex: 0 1 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  line-height: 4vw;
-  position: relative;
-
-  @media screen and (max-width:767px) {
-    padding-top: 70px;
-    text-align: center;
-    flex: 0 0 100%;
-    line-height: 4vw;
+    align-items: flex-start;
+    justify-content: center;
     position: relative;
-    display: inline-block;
-    &:after{
-      clear: both;
-      content: ".";
-      display: block;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 55px;
+    @media screen and (max-width: 767px) {
+      font-size: 25px;
+      line-height: 30px;
+    }
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      font-size: 35px;
+      line-height: 45px;
+    }
+    .left__padding {
+      height: 100%;
+      padding: 25px 65px;
+      @media screen and (max-width: 767px) {
+        padding: 0px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .textFront1 {
+    }
+    .textFront2 {
+      color: #cf403d;
+    }
+    .textBehind {
+      font-size: 90px;
+      position: absolute;
+      z-index: -1;
+      font-weight: bold;
+      color: rgba(13, 13, 13, 0.15);
+      top: 30%;
+      @media screen and (max-width: 767px) {
+        font-size: 50px;
+        right: 0px;
+        left: 0px;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1199px) {
+        top: 30%;
+        font-size: 70px;
+      }
+    }
+    .contactLocation {
+      position: absolute;
+      bottom: 15%;
+      font-size: 15px;
+      line-height: 15px;
+      right: 5%;
+      font-weight: 900;
+      cursor: pointer;
+      @media screen and (max-width: 767px) {
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        text-align: center;
+      }
+      @media screen and(min-width:768px) and (max-width: 991px) {
+        text-align: center;
+        left: 0px;
+        right: 0px;
+      }
+    }
+    .rightBlock {
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
   }
-  @media screen and (min-width:568px) and (max-width:767px) {
-    padding-top:85px;
-    width: 70%;
-  }
 }
-.textFront1 {
-  margin-left: 7vw;
-  margin-right: 10vw;
-  @media screen and(max-width:767px) {
-    margin: 0px;
-    margin-bottom: 0px;
-    font-size: 25px;
-    line-height: 30px
-  }
-}
-.textFront2 {
-  color: #cf403d;
-  margin-left: 7vw;
-  margin-right: 15vw;
-  margin-top: 1vw;
-  @media screen and(max-width:767px) {
-    margin: 0px;
-    margin-bottom: 30px;
-    font-size: 25px;
-    line-height: 30px;
-  }
-}
-.contactLocation {
-  position: absolute;
-  bottom: 0;
-  font-size: 1.2vw;
-  line-height: 1.5vw;
-  right: 7vw;
-  font-weight: 900;
-  cursor: pointer;
-  @media screen and(max-width:767px) {
-    left: 10%;
-    bottom: 10%;
-  }
-}
-.rightBlock {
-  flex: 1 0 50%;
-  height: 29vw;
-  overflow: hidden;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  @media screen and (max-width:767px) {
-    display: inline-block;
-    position: relative;
-    flex: 0px
-  }
-}
-// .img {
-//   width: 100%;
-//   height: auto;
-//   transform: translateY(-2vw);
-// }

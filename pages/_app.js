@@ -10,7 +10,7 @@ import Menu from '../components/Menu'
 import dynamic from 'next/dynamic'
 import router, { Link as NewLink } from '../route'
 import config from "../config"
-import style from './normal.scss'
+// import style from './normal.css'
 class MyApp extends App {
   state = {
     listPage: [],
@@ -44,14 +44,8 @@ class MyApp extends App {
           }
         })
     }
-
-    if (router.routes) {
-
-    }
   }
   render() {
-    // console.log("Router app>>>",router)
-
     const { Component, pageProps, reduxStore } = this.props
     const { listLayoutPage } = this.state
 
@@ -69,25 +63,17 @@ class MyApp extends App {
       <Container>
         <Head>
           <title>{'KYANON DIGITAL'}</title>
-          <style>{style}</style>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+          <link rel="stylesheet" type="text/css" href="/static/css/normalize.css" />
+          {/* <style>{`${style}`}</style> */}
         </Head>
         <Provider store={reduxStore}>
-          <Menu className={styles.menu} />
-          <Navbar className={styles.fixedNav} />
-          {/* <div className={styles.fixedWrapRightSide}>
-            <RightSideText
-              className={styles.fixedRightSideText}
-              text="SCROLL TO EXPLORE"
-            />
-          </div> */}
-          {/* <div className={styles.fixedWrapScrollBottom}>
-            <ScrollBottomIndicator />
-          </div> */}
-          {
-
-
-          }
-          <Component {...layoutActive} data={data} Component={Component} />
+          <div className="container">
+            <Menu className={styles.menu} />
+            <Navbar className={styles.fixedNav} />
+            <Component {...layoutActive} data={data} Component={Component} />
+          </div>
         </Provider>
       </Container>
     )
