@@ -1,6 +1,6 @@
 .wrap {
   font-weight: 700;
-  font-size: 3.7vw;
+
   position: relative;
   display: flex;
   height: 100vh;
@@ -11,9 +11,12 @@
 }
 .section1 {
   padding: 90px 0px;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
   @media screen and (max-width: 767px) {
     padding: 80px 0px;
   }
+
   .leftBlock {
     display: flex;
     flex-direction: column;
@@ -21,23 +24,29 @@
     justify-content: center;
     position: relative;
     font-weight: 700;
-    font-size: 45px;
-    line-height: 55px;
+    font-size: 4.5vw;
+    line-height: 5vw;
     @media screen and (max-width: 767px) {
       font-size: 25px;
       line-height: 30px;
     }
-    @media screen and (min-width: 992px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 991px) {
       font-size: 35px;
       line-height: 45px;
     }
+    // @media screen and (min-width: 1366px) {
+    //   font-size: 65px;
+    //   line-height: 70px;
+    // }
     .left__padding {
       height: 100%;
       padding: 25px 65px;
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 991px) {
         padding: 0px;
         width: 100%;
         text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
       }
     }
     .textFront1 {
@@ -46,28 +55,43 @@
       color: #cf403d;
     }
     .textBehind {
-      font-size: 90px;
+      font-size: 110px;
       position: absolute;
       z-index: -1;
-      font-weight: bold;
+      /* font-weight: bold; */
       color: rgba(13, 13, 13, 0.15);
-      top: 30%;
+      top: 140px;
+      left: 70px;
+      font-family: "Raleway Black";
       @media screen and (max-width: 767px) {
-        font-size: 50px;
+        font-size: 60px;
+        right: 0px;
+        left: 0px;
+        top: 12%;
+      }
+      @media screen and(min-width:768px) and (max-width: 991px) {
+        top: 15%;
+        font-size: 60px;
         right: 0px;
         left: 0px;
       }
       @media screen and (min-width: 992px) and (max-width: 1199px) {
-        top: 30%;
-        font-size: 70px;
+        top: 26%;
+        left: 15%;
+        font-size: 90px;
+      }
+      @media screen and (min-width: 1366px) and (max-width: 1920px) {
+        font-size: 8vw;
+        // top: 25%;
+        left: 75px;
       }
     }
     .contactLocation {
       position: absolute;
-      bottom: 15%;
+      bottom: 5%;
       font-size: 15px;
       line-height: 15px;
-      right: 5%;
+      right: 0;
       font-weight: 900;
       cursor: pointer;
       @media screen and (max-width: 767px) {
@@ -81,12 +105,20 @@
         left: 0px;
         right: 0px;
       }
+      @media screen and (min-width: 1366px) and (max-width: 1920px) {
+        position: absolute;
+        bottom: 10%;
+        line-height: 2vw;
+        font-size: 2vw;
+      }
     }
-    .rightBlock {
-      overflow: hidden;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
+  }
+  .rightBlock {
+    img {
+      max-height: 100%;
+      width: auto;
+      max-width: 100%;
+      display: block;
     }
   }
 }

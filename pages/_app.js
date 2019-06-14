@@ -69,7 +69,7 @@ class MyApp extends App {
           {/* <style>{`${style}`}</style> */}
         </Head>
         <Provider store={reduxStore}>
-          <div className="container">
+          <div className="container-fuild">
             <Menu className={styles.menu} />
             <Navbar className={styles.fixedNav} />
             <Component {...layoutActive} data={data} Component={Component} />

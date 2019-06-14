@@ -9,7 +9,7 @@ const Navbar = props => {
     <div className={props.className}>
       <div className={styles.divFlex}>
         <div className={styles.menu}>
-          <img
+          <img 
             onClick={props.menuOpen}
             className={styles.menuImg}
             src="/static/MenuButton.png"

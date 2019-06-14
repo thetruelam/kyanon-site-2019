@@ -1,4 +1,4 @@
-import React,{Component} from 'react'
+import React, { Component } from 'react'
 import dynamic from 'next/dynamic'
 class ContactUsPage extends Component {
   state = {
@@ -9,27 +9,25 @@ class ContactUsPage extends Component {
   }
   componentDidMount() {
     const { data } = this.props
-    const {listSectionLayout} = this.state
+    const { listSectionLayout } = this.state
     data.map((item, index) => {
       let itemLayout = {}
       const Layout = dynamic(import(`../routes/${item.sectionLayout}`))
       itemLayout['layout'] = Layout
       itemLayout['idSection'] = item.sectiondetail
-      
       listSectionLayout.push(itemLayout)
-      
     })
-    this.setState({listSectionLayout})
+    this.setState({ listSectionLayout })
     console.log(listSectionLayout)
   }
   render() {
     return (
       <>
-        {this.state.listSectionLayout && this.state.listSectionLayout.map((item,index)=>{
+        {this.state.listSectionLayout && this.state.listSectionLayout.map((item, index) => {
           const Layout = item.layout
-         return (
-         <Layout idSection={item.idSection}/>
-         )
+          return (
+            <Layout idSection={item.idSection} />
+          )
         })}
         {/* <Layout/> */}
       </>

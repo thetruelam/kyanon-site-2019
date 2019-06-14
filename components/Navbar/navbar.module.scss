@@ -5,28 +5,58 @@
   // position: fixed;
   z-index: 999;
   .menu {
-    margin-left: 2vw;
+    margin-left: 15px;
+    height:60px;
+    @media screen and (min-width: 1366px) and (max-width: 1920px) {
+      height:80px;
+    }
     .menuImg {
-      height: 6vw;
+      // height: 6vw;
       cursor: pointer;
+    }
+    img{
+      max-height: 100%;
+      width: auto;
+      max-width: 100%;
+      display: block;
     }
   }
   .logo {
-    margin-left: 2vw;
+    margin-left: 15px;
+    height:60px;
+    @media screen and (min-width: 1366px) and (max-width: 1920px) {
+      height:80px;
+    }
     .logoImg {
       cursor: pointer;
-      height: 6vw;
+      // height: 6vw;
+    }
+    img{
+      max-height: 100%;
+      width: auto;
+      max-width: 100%;
+      display: block;
     }
   }
   .contact {
-    flex: 1 0 0;
-    align-self: center;
-    display: flex;
+    position: absolute;
+    right:15px;
+    height:60px;
+    margin-right:15px;
+    @media screen and (min-width: 1366px) and (max-width: 1920px) {
+      height:80px;
+    }
     .contactImg {
       cursor: pointer;
-      height: 4vw;
+      // height: 4vw;
       margin-left: auto;
-      margin-right: 2vw;
+
+    }
+    img{
+      max-height: 100%;
+      width: auto;
+      max-width: 100%;
+      display: block;
     }
   }
 }
