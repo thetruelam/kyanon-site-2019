@@ -34,19 +34,30 @@
       font-size: 35px;
       line-height: 45px;
     }
+    @media screen and (min-width:400px) and(max-width:500px) {
+      font-size: 30px;
+      line-height: 35px;
+    }
     // @media screen and (min-width: 1366px) {
     //   font-size: 65px;
     //   line-height: 70px;
     // }
     .left__padding {
       height: 100%;
-      padding: 25px 65px;
+      padding: 25px 50px;
       @media screen and (max-width: 991px) {
         padding: 0px;
         width: 100%;
         text-align: center;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 150px;
+        padding-right: 150px;
+      }
+      @media screen and(max-width:767px) {
+        padding:0px;
+        padding-top: 15px;
+      }
+      p{
+        margin-bottom: 15px;
       }
     }
     .textFront1 {
@@ -55,23 +66,30 @@
       color: #cf403d;
     }
     .textBehind {
-      font-size: 110px;
+      font-size: 140px;
       position: absolute;
       z-index: -1;
       /* font-weight: bold; */
       color: rgba(13, 13, 13, 0.15);
-      top: 140px;
-      left: 70px;
+      top: 25%;
+
       font-family: "Raleway Black";
-      @media screen and (max-width: 767px) {
-        font-size: 60px;
+      @media screen and(max-width:567px) {
+        top:15%;
+        font-size:70px;
         right: 0px;
         left: 0px;
-        top: 12%;
+        text-align: center;
+      }
+      @media screen and(min-width:568px) and (max-width: 767px) {
+        font-size: 80px;
+        right: 0px;
+        left: 0px;
+        top: 0;
       }
       @media screen and(min-width:768px) and (max-width: 991px) {
-        top: 15%;
-        font-size: 60px;
+        top: 13%;
+        font-size: 70px;
         right: 0px;
         left: 0px;
       }
@@ -81,35 +99,44 @@
         font-size: 90px;
       }
       @media screen and (min-width: 1366px) and (max-width: 1920px) {
-        font-size: 8vw;
+        font-size: 130px;
         top: 25%;
         left: 75px;
       }
     }
     .contactLocation {
       position: absolute;
-      bottom: 5%;
-      font-size: 15px;
-      line-height: 15px;
+      bottom: 7%;
+      font-size: 20px;
+      line-height: 20px;
       right: 0;
       font-weight: 900;
       cursor: pointer;
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 991px) {
         left: 0px;
         right: 0px;
-        bottom: 0px;
+        bottom: 15px;
         text-align: center;
       }
-      @media screen and(min-width:768px) and (max-width: 991px) {
-        text-align: center;
-        left: 0px;
-        right: 0px;
+      @media screen and(min-width:1024px) and (max-width:1200px) {
+        bottom: 10%;
       }
       @media screen and (min-width: 1366px) and (max-width: 1920px) {
         position: absolute;
-        bottom: 10%;
+        bottom: 5%;
         line-height: 2vw;
         font-size: 2vw;
+      }
+      img{
+        @media screen and (min-width: 1366px) and (max-width: 1920px) {
+          width: 12%;
+        }
+      }
+    }
+    .hidden_mobile
+    {
+      @media screen and(max-width:991px) {
+        display: none;
       }
     }
   }

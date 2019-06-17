@@ -19,7 +19,6 @@ class Section1 extends Component {
         this.setState({
           data: res[0].detailJson
         })
-        console.log(">>>>>", res)
       })
   }
   render() {
@@ -45,9 +44,9 @@ class Section1 extends Component {
               // onClick={() => this.props.slideTo(1)}
               className={styles.contactLocation}
             >
-              Contact <br /> &amp;{' '}
+              Contact <br className={styles.hidden_mobile} /> &amp;{' '}
               <span style={{ color: '#cf403d' }}>Locations</span>
-              <br />
+              <br className={styles.hidden_mobile} />
               <img src="/static/down-arrow.png" />
             </div>
           </div>
