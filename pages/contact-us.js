@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import dynamic from 'next/dynamic'
+import Swiper from 'react-id-swiper'
+
 class ContactUsPage extends Component {
   state = {
     listSectionLayout: []
@@ -16,13 +18,24 @@ class ContactUsPage extends Component {
       itemLayout['layout'] = Layout
       itemLayout['idSection'] = item.sectiondetail
       listSectionLayout.push(itemLayout)
+      console.log(">>>>",item)
     })
+    listSectionLayout.reverse()
     this.setState({ listSectionLayout })
     console.log(listSectionLayout)
   }
+
   render() {
     return (
-      <>
+      <Swiper
+            mousewheel={{
+              sensitivity: 1,
+              releaseOnEdges: true
+            }}
+            direction={'vertical'}
+            containerClass={`swiper-container`}
+
+          >
         {this.state.listSectionLayout && this.state.listSectionLayout.map((item, index) => {
           const Layout = item.layout
           return (
@@ -30,7 +43,7 @@ class ContactUsPage extends Component {
           )
         })}
         {/* <Layout/> */}
-      </>
+      </Swiper>
     )
   }
 }
