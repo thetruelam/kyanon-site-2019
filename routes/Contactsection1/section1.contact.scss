@@ -18,7 +18,8 @@
   background-attachment: fixed;
   background-position: center;
   @media screen and (max-width: 767px) {
-    padding: 80px 0px;
+    padding:0px;
+    padding-top: 80px ;
   }
 
   .leftBlock {
@@ -158,3 +159,4 @@
     }
   }
 }
+ 
