@@ -19,7 +19,9 @@
     font-weight: 700;
     font-size: 4.5vw;
     line-height: 5vw;
-
+    @media screen and (min-width:992px) and(max-width:1200px) {
+      height: 60vh;
+    }
     @media screen and (max-width: 767px) {
       font-size: 25px;
       line-height: 30px;
@@ -165,6 +167,10 @@
         height: auto;
         left:0px;
       }
+      @media screen and(min-width:992px) and (max-width:1200px){
+        height: 65vh;
+      }
+       
     }
     .photo_2 {
       right: 5%;
@@ -189,6 +195,10 @@
         height: auto;
         top:0px;
       }
+      @media screen and(min-width:992px) and (max-width:1200px)  {
+        bottom: 25%;
+        height: 40vh;
+      }
     }
     .photo_3 {
       left: -14%;
@@ -212,6 +222,10 @@
         bottom: 30px;
         height: auto;
         left:0px;
+      }
+      @media screen and (min-width:992px) and(max-width:1200px) {
+        bottom: 40%;
+        height: 20vh;
       }
     }
     .fade-shadow {

@@ -18,11 +18,9 @@ class ContactUsPage extends Component {
       itemLayout['layout'] = Layout
       itemLayout['idSection'] = item.sectiondetail
       listSectionLayout.push(itemLayout)
-      console.log(">>>>",item)
     })
     listSectionLayout.reverse()
     this.setState({ listSectionLayout })
-    console.log(listSectionLayout)
   }
 
   render() {

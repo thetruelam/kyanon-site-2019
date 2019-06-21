@@ -29,7 +29,6 @@ class Section2 extends Component {
     const arrayImage = this.state.data.F13.split(',')
     return (
       <div className={`row ${styles.section2}`}>
-
         <div className={`${styles.leftBlock} col-12 col-sm-12 col-lg-6 col-xl-6`}>
           <div className={`${styles.left__padding}`}>
             <h1>OUR OFFICE</h1>
