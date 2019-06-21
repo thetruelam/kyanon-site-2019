@@ -27,15 +27,16 @@ class ContactUsPage extends Component {
 
   render() {
     return (
-      <Swiper
-            mousewheel={{
-              sensitivity: 1,
-              releaseOnEdges: true
-            }}
-            direction={'vertical'}
-            containerClass={`swiper-container`}
+      <>
+      {/* // <Swiper
+      //       mousewheel={{
+      //         sensitivity: 1,
+      //         releaseOnEdges: true
+      //       }}
+      //       direction={'vertical'}
+      //       containerClass={`swiper-container`}
 
-          >
+      //     > */}
         {this.state.listSectionLayout && this.state.listSectionLayout.map((item, index) => {
           const Layout = item.layout
           return (
@@ -43,7 +44,8 @@ class ContactUsPage extends Component {
           )
         })}
         {/* <Layout/> */}
-      </Swiper>
+      {/* // </Swiper> */}
+      </>
     )
   }
 }
