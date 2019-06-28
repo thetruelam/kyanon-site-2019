@@ -10,7 +10,6 @@ import Menu from '../components/Menu'
 import dynamic from 'next/dynamic'
 import router, { Link as NewLink } from '../route'
 import config from "../config"
-// import style from './normal.css'
 class MyApp extends App {
   state = {
     listPage: [],
