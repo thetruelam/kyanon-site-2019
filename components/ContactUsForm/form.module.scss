@@ -7,6 +7,7 @@
   background-color: rgba(54, 54, 54, .95);
   z-index: 20;
   display: block;
+
   .content {
     padding: 30px 70px 60px 30px;
     max-width: 1000px;
@@ -19,8 +20,90 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background-color: #fff;
-    .warp_content{
-      
+
+    .warp_content {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      vertical-align: baseline;
+    }
+
+    .left_content {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .right_content {
+      width: 65%;
+      padding-left: 70px;
+      display: inline-block;
+      vertical-align: middle;
+
+      .inner_close {
+        text-align: right;
+        cursor: pointer;
+        position: relative;
+        right: -20px;
+      }
+
+      .title {
+        display: inline-block;
+        background: -moz-linear-gradient(left, #ec1c24 0%, #3a1f46 100%);
+        background: linear-gradient(to right, #ec1c24 0%, #3a1f46 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparentx;
+        font-size: 30px;
+        font-family: Geo-BA;
+        text-transform: uppercase;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 60px;
+          height: 8px;
+          background-color: red;
+          margin: 20px 0 0 0;
+        }
+      }
+
+      .form_custom {
+        margin-top: 65px;
+
+        .input_contact {
+          width: 100%;
+          padding: 19px 27px;
+          font-size: 16px;
+          border: 1px solid #b7b7b7;
+          border-radius: 30px;
+          -webkit-border-radius: 30px;
+        }
+
+        .btn_group {
+          margin-top: 35px;
+          text-align: right;
+          input{
+            border: 1px solid;
+            padding: 8px 10px;
+            background-color: transparent;
+            outline: 0;
+            font-size:17px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            min-width: 164px;
+            padding: 3px 10px;
+            text-transform: uppercase;
+            color: #ec1c24;
+            font-family: Monst-B;
+            border: 2px solid;
+            border-radius: 18px;
+            -webkit-border-radius: 18px;
+            -moz-transition: all .2s ease-in;
+            transition: all .2s ease-in;
+            -webkit-transition: all .2s ease-in;
+          }
+        }
+      }
     }
   }
 }

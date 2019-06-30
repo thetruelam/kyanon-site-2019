@@ -4,6 +4,7 @@ import Swiper from 'react-id-swiper'
 import styles from './contact.module.scss'
 import ContactSection1 from "../routes/Contactsection1"
 import ContactSection2 from "../routes/Contactsection2"
+import FormContact from "../components/ContactUsForm"
 class ContactUsPage extends Component {
   state = {
     listSectionLayout: []
@@ -29,7 +30,8 @@ class ContactUsPage extends Component {
     }
     return (
       <>
-        <Swiper
+      <FormContact/>
+        {/* <Swiper
           mousewheel={{
             sensitivity: 1,
             releaseOnEdges: true
@@ -52,8 +54,8 @@ class ContactUsPage extends Component {
             )
           })} */}
           {/* <div style={{height:"100vh"}}>ABC</div>
-         <div style={{height:"100vh"}}>XYZ</div> */}
-        </Swiper>
+         <div style={{height:"100vh"}}>XYZ</div>
+        </Swiper> */}
       </>
     )
   }
