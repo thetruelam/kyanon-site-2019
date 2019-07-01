@@ -8,10 +8,10 @@ class ContactForm extends Component {
       <div className={`${styles.contact_form}`}>
         <div className={`${styles.content}`}>
           <div className={`${styles.warp_content} row`}>
-            <div className={`${styles.left_content} col-xl-4`}>
+            <div className={`${styles.left_content} col-xl-4 col-md-12`}>
               <img src="/static/popup-info.png" />
             </div>
-            <div className={`${styles.right_content} col-xl-8`}>
+            <div className={`${styles.right_content} col-xl-8 col-md-12`}>
               <div className={`${styles.inner_close}`}>
                 <img src="/static/close.png"/>
               </div>
