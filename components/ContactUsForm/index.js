@@ -34,33 +34,33 @@ class ContactForm extends Component {
     }
     else {
       let body = {
-        'to':'thanh.ngly@kyanon.digital',
-        'subject':`Notice: We have 1 contact from ${name.value} - ${email.value}`,
-        'text':`Name: ${name.value} - Email: ${email.value} - Phone: ${phone.value} - Message: ${message.value}`,
-        'html':`<h1>Name: ${name.value} <br/>- Email: ${email.value} <br/>- Phone: ${phone.value} <br/>- Message: ${message.value}</h1>`
+        'to': 'thanh.ngly@kyanon.digital',
+        'subject': `Notice: We have 1 contact from ${name.value} - ${email.value}`,
+        'text': `Name: ${name.value} - Email: ${email.value} - Phone: ${phone.value} - Message: ${message.value}`,
+        'html': `<h1>Name: ${name.value} <br/>- Email: ${email.value} <br/>- Phone: ${phone.value} <br/>- Message: ${message.value}</h1>`
       }
-      fetch(`${config.BACKEND_DOMAIN}mail`, {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(body)
-    }).then(response => { return response.json() })
-      .then(res => {
-        let isError = false;
-        let messageError = "";
-        if(res.error)
-        {
-          isError = true;
-          messageError=res.message;
-        }
-        else{
-          this.setState({isSend:true})
-        }
-        console.log("This is send mail success>>>>",res)
-      })
-     }
+      fetch(`${config.BACKEND_DOMAIN}email`, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(body)
+      }).then(response => { return response.json() })
+        .then(res => {
+          let isError = false;
+          let messageError = {};
+          if (res.error) {
+            isError = true;
+            messageError['error'] = res.message;
+            this.setState({ isError, messageError });
+          }
+          else {
+            this.setState({ isSend: true })
+          }
+          console.log("This is send mail success>>>>", res)
+        })
+    }
   }
   render() {
     return (
@@ -77,24 +77,40 @@ class ContactForm extends Component {
               <div className={`${styles.title}`}>
                 Meet Us
               </div>
-              {this.state.isSend?<div>Your message have sent.</div>:<div className={`${styles.form_custom}`}>
-                <div className="form-group">
-                  <input ref="name" className={`${styles.input_contact}`} placeholder="Your name..." />
-                </div>
-                <div className="form-group">
-                  <input ref="email" className={`${styles.input_contact}`} placeholder="Your email..." />
-                </div>
-                <div className="form-group">
-                  <input ref="phone" className={`${styles.input_contact}`} placeholder="Your phone..." />
-                </div>
-                <div className="form-group">
-                  <input ref="message" className={`${styles.input_contact}`} placeholder="Your message..." />
-                </div>
-                <div className={`${styles.btn_group} form-group`}>
-                  <input type="button" onClick={this.sendMail} value="send" />
-                </div>
-              </div>}
-             
+              {this.state.isSend ? <div>Your message have sent.</div> :
+                <div className={`${styles.form_custom}`}>
+                  {this.state.isError && this.state.messageError['error'] && (
+                    <label style={{ color: "red" }}>{this.state.messageError['error']}</label>
+                  )}
+                  <div className="form-group">
+                    <input ref="name" className={`${styles.input_contact}`} placeholder="Your name..." />
+                    {this.state.isError && this.state.messageError['name'] && (
+                      <label style={{ color: "red" }}>{this.state.messageError['name']}</label>
+                    )}
+                  </div>
+                  <div className="form-group">
+                    <input ref="email" className={`${styles.input_contact}`} placeholder="Your email..." />
+                    {this.state.isError && this.state.messageError['email'] && (
+                      <label style={{ color: "red" }}>{this.state.messageError['email']}</label>
+                    )}
+                  </div>
+                  <div className="form-group">
+                    <input ref="phone" className={`${styles.input_contact}`} placeholder="Your phone..." />
+                    {this.state.isError && this.state.messageError['phone'] && (
+                      <label style={{ color: "red" }}>{this.state.messageError['phone']}</label>
+                    )}
+                  </div>
+                  <div className="form-group">
+                    <input ref="message" className={`${styles.input_contact}`} placeholder="Your message..." />
+                    {this.state.isError && this.state.messageError['message'] && (
+                      <label style={{ color: "red" }}>{this.state.messageError['message']}</label>
+                    )}
+                  </div>
+                  <div className={`${styles.btn_group} form-group`}>
+                    <input type="button" onClick={this.sendMail} value="send" />
+                  </div>
+                </div>}
+
             </div>
           </div>
         </div>
