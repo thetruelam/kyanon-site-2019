@@ -3,3 +3,12 @@
   width: 100vw;
   overflow: hidden;
 }
+.fixedWrapScrollBottom {
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
+}
+.getInTouch {
+  margin-bottom: 0vh;
+}

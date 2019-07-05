@@ -58,7 +58,6 @@ class ContactForm extends Component {
           else {
             this.setState({ isSend: true })
           }
-          console.log("This is send mail success>>>>", res)
         })
     }
   }
@@ -71,13 +70,13 @@ class ContactForm extends Component {
               <img src="/static/popup-info.png" />
             </div>
             <div className={`${styles.right_content} col-xl-8 col-md-12`}>
-              <div className={`${styles.inner_close}`}>
+              <div style={{cursor:"pointer"}} onClick={this.props.submitForm} className={`${styles.inner_close}`}>
                 <img src="/static/close.png" />
               </div>
               <div className={`${styles.title}`}>
                 Meet Us
               </div>
-              {this.state.isSend ? <div>Your message have sent.</div> :
+              {this.state.isSend ? <div style={{paddingTop:"25px",fontSize:"18px"}}>Your message have sent.</div> :
                 <div className={`${styles.form_custom}`}>
                   {this.state.isError && this.state.messageError['error'] && (
                     <label style={{ color: "red" }}>{this.state.messageError['error']}</label>
