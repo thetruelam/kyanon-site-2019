@@ -4,9 +4,12 @@ import Swiper from 'react-id-swiper'
 import styles from './contact.module.scss'
 // import ContactSection1 from "../routes/Contactsection1"
 // import ContactSection2 from "../routes/Contactsection2"
+import ScrollBottomIndicator from '../components/ScrollBottomIndicator'
 import FormContact from "../components/ContactUsForm"
 import GetInTouch from '../components/GetInTouch'
+import ScrollBar from '../components/ScrollBar'
 class ContactUsPage extends Component {
+
   state = {
     listSectionLayout: [],
     isShow: false,
@@ -43,6 +46,16 @@ class ContactUsPage extends Component {
     return (
       <>
         {/* <FormContact/> */}
+        <div className={styles.wrapScrollBar}>
+            <ScrollBar
+              currentSection={1}
+              maxSection={2}
+              slideTo={(index, speed, runCallback) =>
+                swiper.slideTo(index, speed, runCallback)
+              }
+              className={styles.scrollBar}
+            />
+          </div>
         <Swiper
           mousewheel={{
             sensitivity: 1,
@@ -68,10 +81,10 @@ class ContactUsPage extends Component {
         </Swiper>
         <div className={styles.fixedWrapScrollBottom}>
           <GetInTouch className={styles.getInTouch} clickContact={this.onClickContact} />
-          {/* <ScrollBottomIndicator
-              currentSection={props.sectionContactUs.currentSection}
-              maxSection={props.sectionContactUs.maxSection}
-            /> */}
+          <ScrollBottomIndicator
+              currentSection={1}
+              maxSection={2}
+            />
         </div>
         {this.state.isShow?<FormContact submitForm={this.onSubmitForm}/>:<></>}
       </>

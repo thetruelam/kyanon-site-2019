@@ -12,3 +12,15 @@
 .getInTouch {
   margin-bottom: 0vh;
 }
+.wrapScrollBar {
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  margin-left: 2vw;
+  z-index: 999;
+}
+.scrollBar {
+  height: 30%;
+  transform: translateY(5vh);
+}
