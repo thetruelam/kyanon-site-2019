@@ -1,95 +1,96 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import Swiper from 'react-id-swiper'
 import styles from './contact.module.scss'
-// import ContactSection1 from "../routes/Contactsection1"
-// import ContactSection2 from "../routes/Contactsection2"
 import ScrollBottomIndicator from '../components/ScrollBottomIndicator'
 import FormContact from "../components/ContactUsForm"
 import GetInTouch from '../components/GetInTouch'
 import ScrollBar from '../components/ScrollBar'
-class ContactUsPage extends Component {
+import { section as sectionAction,menu as menuAction  } from '../redux/actions'
+import { connect } from 'react-redux'
+const mapState = state => ({
+  sectionContactUs: state.section.contactUs,
+  menu: state.menu,
+})
 
-  state = {
-    listSectionLayout: [],
-    isShow: false,
-  }
-  static getInitialProps(ctx) {
-    return { url: ctx.pathname };
-  }
-  componentDidMount() {
-    const { data } = this.props
-    const { listSectionLayout } = this.state
-    data.map((item, index) => {
-      let itemLayout = {}
-      const Layout = dynamic(import(`../routes/${item.sectionLayout}`))
-      itemLayout['layout'] = Layout
-      itemLayout['idSection'] = item.sectiondetail
-      listSectionLayout.push(itemLayout)
-    })
-    this.setState({ listSectionLayout })
-  }
+const mapDispatch = { ...sectionAction,...menuAction }
 
-  onClickContact = () =>{
-    console.log("SHow>>>>>",this.state.isShow)
-    this.setState({isShow:true});
-  }
+let listSectionLayout = [];
 
-  onSubmitForm = () =>{
-    this.setState({isShow:false});
-  }
+const renderSection = (props) => {
+  const { data } = props;
+  data.map((item, index) => {
+    let itemLayout = {}
+    const Layout = dynamic(import(`../routes/${item.sectionLayout}`))
+    itemLayout['layout'] = Layout
+    itemLayout['data'] = item.sectiondetail.detailJson;
+    listSectionLayout.push(itemLayout)
+  })
+}
 
-  render() {
-    if (this.state.listSectionLayout && this.state.listSectionLayout.length === 0) {
-      return <>Loading.....</>
-    }
-    return (
-      <>
-        {/* <FormContact/> */}
+const ContactUsPage = (props) => {
+  let swiperInstance = null
+  const [swiper, updateSwiper] = useState(null)
+  useEffect(() => {
+    props.moveToSectionContactUs(1)
+  }, [])
+  const { isOpenForm } = props.menu;
+  return (
+    <React.Fragment>
+      {renderSection(props)}
+      {listSectionLayout.length>0&&( <>
         <div className={styles.wrapScrollBar}>
-            <ScrollBar
-              currentSection={1}
-              maxSection={2}
-              slideTo={(index, speed, runCallback) =>
-                swiper.slideTo(index, speed, runCallback)
-              }
-              className={styles.scrollBar}
-            />
-          </div>
+          <ScrollBar
+            currentSection={props.sectionContactUs.currentSection}
+            maxSection={props.sectionContactUs.maxSection}
+            slideTo={(index, speed, runCallback) =>
+              swiper.slideTo(index, speed, runCallback)
+            }
+            className={styles.scrollBar}
+          />
+        </div>
         <Swiper
           mousewheel={{
             sensitivity: 1,
             releaseOnEdges: true
           }}
           direction={'vertical'}
-          containerClass={`swiper-container ${styles.kd_swiper}`}
+          containerClass={`swiper-container ${styles.swiper}`}
+          //when swiper render, swiperInstance is swiper instance
+          getSwiper={swiper => {
+            swiperInstance = swiper
+            updateSwiper(swiper)
+          }}
+          //Use swiperInstance in here, outside here use swiper
+          on={{
+            //on init, set method slideTo
+            slideChangeTransitionEnd: () => {
+              props.moveToSectionContactUs(swiperInstance.realIndex + 1)
+            }
+          }}
         >
-          {/* <div style={{ height: "100vh" }}>
-            <ContactSection1 idSection={this.state.listSectionLayout[0].idSection} />
-          </div>
-          <div style={{ height: "100vh" }}>
-            <ContactSection2 idSection={this.state.listSectionLayout[1].idSection} />
-          </div> */}
-          {this.state.listSectionLayout && this.state.listSectionLayout.map((item, index) => {
+          {listSectionLayout && listSectionLayout.map((item, index) => {
             const Layout = item.layout
             return (
               <div key={index} style={{ height: "100vh" }}>
-                <Layout idSection={item.idSection} />
+                <Layout data={item.data} />
               </div>
             )
           })}
         </Swiper>
         <div className={styles.fixedWrapScrollBottom}>
-          <GetInTouch className={styles.getInTouch} clickContact={this.onClickContact} />
+          <GetInTouch className={styles.getInTouch} clickContact={props.openForm} />
           <ScrollBottomIndicator
-              currentSection={1}
-              maxSection={2}
-            />
+            currentSection={props.sectionContactUs.currentSection}
+            maxSection={props.sectionContactUs.maxSection}
+          />
         </div>
-        {this.state.isShow?<FormContact submitForm={this.onSubmitForm}/>:<></>}
-      </>
-    )
-  }
+        {isOpenForm ? <FormContact submitForm={props.closeForm} /> : <></>}
+      </>)}
+    </React.Fragment>
+  )
 }
-
-export default ContactUsPage
+export default connect(
+  mapState,
+  mapDispatch
+)(ContactUsPage)

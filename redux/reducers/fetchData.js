@@ -4,7 +4,8 @@ const fetchData = (
   state = {
     homepage: { apiUrl: '', isFetching: false, res: null, err: null },
     contactUs: { apiUrl: '', isFetching: false, res: null, err: null },
-    menu: { apiUrl: '', isFetching: false, res: null, err: null }
+    menu: { apiUrl: '', isFetching: false, res: null, err: null },
+    pages: {apiUrl: '', isFetching: false, res: null, err: null},
   },
   action
 ) => {
@@ -98,6 +99,35 @@ const fetchData = (
         apiUrl: action.apiUrl,
         isFetching: false,
         err: action.err
+      }
+    }
+  case "FETCH_PAGE_REQUEST":
+    return {
+      ...state,
+      pages: {
+        ...state.pages,
+        apiUrl: action.apiUrl,
+        isFetching:true,
+      }
+    }
+  case "FETCH_PAGE_SUCCESS":
+    return {
+      ...state,
+      pages: {
+        ...state.pages,
+        apiUrl: action.apiUrl,
+        isFetching:false,
+        res:action.res,
+      }
+    }
+  case "FETCH_PAGE_ERROR":
+    return {
+      ...state,
+      pages: {
+        ...state.pages,
+        apiUrl: action.apiUrl,
+        isFetching:false,
+        err: action.err,
       }
     }
   default:

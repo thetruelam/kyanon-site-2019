@@ -16,6 +16,12 @@
   box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   transition: transform 0.5s;
+  @media screen and (max-width:767px) {
+    width: 90px;
+    height: 25px;
+    line-height: 25px;
+    font-size:12px;
+  }
 }
 .getInTouch:hover {
   transition: transform 0.5s;
@@ -29,6 +35,9 @@
   font-weight: 600;
   letter-spacing: 0.3em;
   margin-top: 0.8vw;
+  @media screen and (max-width:568px) {
+    font-size: 8px;
+  }
 }
 .contact {
   color: #cf403d;

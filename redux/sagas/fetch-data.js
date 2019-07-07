@@ -72,8 +72,8 @@ function* contactFetchData(action) {
     const client = new ApolloClient({
       uri: action.apiUrl
     })
-    const res = json.pagecontact
-    /*const res = yield call(client.query, {
+    // const res = json.pagecontact
+    const res = yield call(client.query, {
       query: gql`
         {
           pagecontact(id: "5c8731b2a7af0e19d5fc6260") {
@@ -111,7 +111,7 @@ function* contactFetchData(action) {
           }
         }
       `
-    })*/
+    })
     yield put(
       fetchDataAction.contactUsFetchDataSuccess(
         action.apiUrl,
@@ -165,10 +165,59 @@ function* watchMenuFetchData() {
   yield takeLatest(fetchDataConst.MENU_FETCH_DATA_REQUEST, menuFetchData)
 }
 
+function* pagesFetchData(action) {
+  try {
+    const client = new ApolloClient({
+      uri: action.apiUrl
+    })
+    // const res = json.pagecontact
+    const res = yield call(client.query, {
+      query: gql`
+      {
+        pages{
+          pageName,
+          url,
+          fullUrl,
+          typeLayout,
+          pageLayout,
+          sections{
+            sectionName,
+            sectionLayout,
+            sectiondetail{
+              detailJson,
+              sectionType
+            }
+          }
+          metadata{
+            metaHTML,
+            pageName,
+          }
+        }
+      }
+      `
+    })
+    yield put(
+      fetchDataAction.pagesFetchDataSuccess(
+        action.apiUrl,
+        res.data
+      )
+    )
+  } catch (err) {
+    yield put(
+      fetchDataAction.pagesFetchDataFail(action.apiUrl, err.toString())
+    )
+  }
+}
+
+function* watchPageFetchData() {
+  yield takeLatest("FETCH_PAGE_REQUEST", pagesFetchData)
+}
+
 export default function* rootSaga() {
   yield all([
     call(watchHomePageFetchData),
     call(watchContactFetchData),
-    call(watchMenuFetchData)
+    call(watchMenuFetchData),
+    call(watchPageFetchData),
   ])
 }

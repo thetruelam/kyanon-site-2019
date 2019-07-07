@@ -46,3 +46,18 @@ export const menuFetchDataFail = (apiUrl, err) => ({
   apiUrl,
   err
 })
+
+export const pagesFetchDataRequest = apiUrl => ({
+  type: "FETCH_PAGE_REQUEST",
+  apiUrl
+})
+export const pagesFetchDataSuccess = (apiUrl,res) => ({
+  type: "FETCH_PAGE_SUCCESS",
+  apiUrl,
+  res
+})
+export const  pagesFetchDataFail= (apiUrl,err) => ({
+  type: "FETCH_PAGE_ERROR",
+  apiUrl,
+  err
+})

@@ -10,54 +10,10 @@ import Menu from '../components/Menu'
 import dynamic from 'next/dynamic'
 import router, { Link as NewLink } from '../route'
 import config from "../config"
+import RouterDynamic from "../routeDynamic";
 class MyApp extends App {
-  state = {
-    listPage: [],
-    listLayoutPage: [],
-  }
-  componentDidMount() {
-    const { listLayoutPage } = this.state;
-    if (this.state.listPage.length === 0) {
-      fetch(`${config.BACKEND_DOMAIN}pages`, {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json"
-        }
-      })
-        .then(response => { return response.json() })
-        .then(res => {
-          if (res) {
-            res.map((item, index) => {
-              router.add({ name: item.pageName, pattern: item.url, page: item.pageLayout })
-              //Create dynamic page --- 
-              let itemLayout = {}
-              const Layout = dynamic(import(`../pages/${item.pageLayout}`))
-              itemLayout['routeName'] = item.pageName
-              itemLayout['pageLayout'] = Layout
-              itemLayout['pattern'] = item.url
-              itemLayout['listSection'] = item.sections
-              listLayoutPage.push(itemLayout)
-            })
-            this.setState({ listPage: res, listLayoutPage })
-          }
-        })
-    }
-  }
   render() {
     const { Component, pageProps, reduxStore } = this.props
-    const { listLayoutPage } = this.state
-
-    if (router.routes.length === 0) {
-      return (<></>)
-    }
-    let currentUrl = this.props.router.route;
-    if (currentUrl === "/") {
-      currentUrl = "/homepage"
-    }
-    const pageActive = listLayoutPage.find(item => item.pattern === currentUrl)
-    const layoutActive = pageActive.pageLayout
-    const data = pageActive.listSection
     return (
       <Container>
         <Head>
@@ -68,11 +24,7 @@ class MyApp extends App {
           {/* <style>{`${style}`}</style> */}
         </Head>
         <Provider store={reduxStore}>
-          <div className="container-fuild">
-            <Menu className={styles.menu} />
-            <Navbar className={styles.fixedNav} />
-            <Component {...layoutActive} data={data} Component={Component} />
-          </div>
+          <RouterDynamic Component={Component} currentUrl={this.props.router.route}/>
         </Provider>
       </Container>
     )
