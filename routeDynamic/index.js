@@ -8,6 +8,7 @@ import dynamic from 'next/dynamic'
 import Navbar from '../components/Navbar'
 import styles from '../pages/_app.module.scss'
 import Menu from '../components/Menu'
+
 const mapState = state => ({
   fetchDataPages: state.fetchData.pages.res,
 })
@@ -31,12 +32,14 @@ const renderRoute = (props) => {
       itemLayout['listSection'] = item.sections
       listLayoutPage.push(itemLayout)
     })
+
     if (!_.isEmpty(currentUrl)&&!_.isEmpty(listLayoutPage)) {
       let tempCurrentUrl = currentUrl==="/"?"/homepage":currentUrl;
       const pageActive = listLayoutPage.find(item => item.pattern === tempCurrentUrl)
       layoutActive = pageActive.pageLayout
       data = pageActive.listSection
     }
+    
   }
 }
 

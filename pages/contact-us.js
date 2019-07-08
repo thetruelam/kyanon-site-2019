@@ -8,6 +8,7 @@ import GetInTouch from '../components/GetInTouch'
 import ScrollBar from '../components/ScrollBar'
 import { section as sectionAction,menu as menuAction  } from '../redux/actions'
 import { connect } from 'react-redux'
+
 const mapState = state => ({
   sectionContactUs: state.section.contactUs,
   menu: state.menu,
