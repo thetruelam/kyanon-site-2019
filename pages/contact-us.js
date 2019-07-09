@@ -6,7 +6,7 @@ import ScrollBottomIndicator from '../components/ScrollBottomIndicator'
 import FormContact from "../components/ContactUsForm"
 import GetInTouch from '../components/GetInTouch'
 import ScrollBar from '../components/ScrollBar'
-import { section as sectionAction,menu as menuAction  } from '../redux/actions'
+import { section as sectionAction, menu as menuAction } from '../redux/actions'
 import { connect } from 'react-redux'
 
 const mapState = state => ({
@@ -14,7 +14,7 @@ const mapState = state => ({
   menu: state.menu,
 })
 
-const mapDispatch = { ...sectionAction,...menuAction }
+const mapDispatch = { ...sectionAction, ...menuAction }
 
 let listSectionLayout = [];
 
@@ -39,7 +39,7 @@ const ContactUsPage = (props) => {
   return (
     <React.Fragment>
       {renderSection(props)}
-      {listSectionLayout.length>0&&( <>
+      {listSectionLayout.length > 0 && (<>
         <div className={styles.wrapScrollBar}>
           <ScrollBar
             currentSection={props.sectionContactUs.currentSection}
