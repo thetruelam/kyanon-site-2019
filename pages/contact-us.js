@@ -57,14 +57,11 @@ const ContactUsPage = (props) => {
           }}
           direction={'vertical'}
           containerClass={`swiper-container ${styles.swiper}`}
-          //when swiper render, swiperInstance is swiper instance
           getSwiper={swiper => {
             swiperInstance = swiper
             updateSwiper(swiper)
           }}
-          //Use swiperInstance in here, outside here use swiper
           on={{
-            //on init, set method slideTo
             slideChangeTransitionEnd: () => {
               props.moveToSectionContactUs(swiperInstance.realIndex + 1)
             }

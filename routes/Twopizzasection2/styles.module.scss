@@ -1,0 +1,83 @@
+.padding_row {
+  padding-top: 75px;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 100vh;
+  @media screen and (max-width: 568px) {
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .title {
+    font-family: Geo-BA;
+    text-transform: uppercase;
+    h4 {
+      display: block;
+      background: -moz-linear-gradient(left, #ec1c24 0%, #3a1f46 10%);
+      background: linear-gradient(to right, #ec1c24 0%, #3a1f46 10%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      overflow: hidden;
+      font-weight: bold;
+    }
+    h3 {
+      font-size: 45px;
+      color: #ec1c24;
+      margin: 7px 0 0 0;
+      visibility: visible;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-duration: 0.5s;
+      animation-delay: 0.01s;
+      animation-name: fadeIn;
+      font-weight: bold;
+      &:after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 8px;
+        background-color: red;
+        margin: 23px 0 0 0;
+        @media screen and (max-width: 568px) {
+          margin: 15px 0 15px 0;
+        }
+      }
+      @media screen and (max-width: 568px) {
+        font-size: 30px;
+      }
+    }
+  }
+  .content {
+    text-align: center;
+    p {
+      font-size: 30px;
+      color: #07154e;
+      font-family: Monst-B;
+      font-weight: bold;
+      @media screen and (max-width: 568px) {
+        font-size: 20px;
+      }
+    }
+  }
+  .padding_item {
+    text-align: center;
+    @media screen and (max-width: 568px) {
+      padding:15px 0;
+    }
+    img {
+      padding-bottom: 20px;
+    }
+    .information {
+      label {
+        color: #fb2d23;
+        font-family: Monst-Bl;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
