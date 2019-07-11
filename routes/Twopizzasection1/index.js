@@ -18,7 +18,7 @@ const TwoPizzaSection1 = (props) => {
           <img className={styles.text_pizza} src={data.listImage[9]} />
           <img className={styles.location} src={data.listImage[10]} />
         </div>
-        <div clasName={styles.kv_mb}>
+        <div className={styles.kv_mb}>
           <img src={data.listImage[11]} />
           <img className={styles.dot} src={data.listImage[12]} />
           <img className={styles.scrum} src={data.listImage[13]} />
