@@ -33,13 +33,13 @@ const renderRoute = (props) => {
       listLayoutPage.push(itemLayout)
     })
 
-    if (!_.isEmpty(currentUrl)&&!_.isEmpty(listLayoutPage)) {
-      let tempCurrentUrl = currentUrl==="/"?"/homepage":currentUrl;
+    if (!_.isEmpty(currentUrl) && !_.isEmpty(listLayoutPage)) {
+      let tempCurrentUrl = currentUrl === "/" ? "/homepage" : currentUrl;
       const pageActive = listLayoutPage.find(item => item.pattern === tempCurrentUrl)
       layoutActive = pageActive.pageLayout
       data = pageActive.listSection
     }
-    
+
   }
 }
 
@@ -48,9 +48,11 @@ const RouterDynamic = props => {
     props.pagesFetchDataRequest(`${config.BACKEND_DOMAIN}graphql`)
   }, [])
   const { Component } = props;
+  if (_.isEmpty(data) && !_.isEmpty(props.fetchDataPages)) {
+    renderRoute(props);
+  }
   return (
     <React.Fragment>
-      {renderRoute(props)}
       <div className="container-fuild">
         <Menu className={styles.menu} />
         <Navbar className={styles.fixedNav} />
