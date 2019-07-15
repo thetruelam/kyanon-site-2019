@@ -1,4 +1,4 @@
-.section3 {
+.section4 {
   height: 100vh;
   padding-top: 75px;
   @media screen and (max-width: 1079px) {
@@ -29,8 +29,8 @@
       position: relative;
       margin-left: 30px;
     }
-    @media screen and (max-width:767px) {
-        font-size:20px;
+    @media screen and (max-width: 767px) {
+      font-size: 20px;
     }
   }
   .sub_title {
@@ -52,27 +52,54 @@
       background-color: red;
       margin: 23px 0 0 0;
     }
-    @media screen and (max-width:767px) {
-        font-size:30px;
-        line-height: 35px;
+    @media screen and (max-width: 767px) {
+      font-size: 30px;
+      line-height: 35px;
+      padding-bottom: 15px;
     }
   }
-  .item_build {
-    text-align: center;
-    p {
-      visibility: visible;
-      animation-duration: 0.6s;
-      animation-delay: 0.03s;
-      animation-name: fadeInUp;
-      margin-top: 30px;
-      font-size: 15px;
-      font-family: Monst-SB;
-      line-height: 1.4;
-      color: #000;
-      font-weight: 600;
-      @media screen and (max-width:767px) {
-        font-size:12px;
-        margin-top: 10px;
+  .content_left {
+    font-size: 25px;
+    color: #07154f;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-family: Monst-SB;
+    line-height: 1;
+    margin: 0px;
+    font-weight: bold;
+    border-right: 1px solid #07154f;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .content_right {
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: Monst-SB;
+    font-weight: 700;
+    line-height: 25px;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .image_frame {
+    visibility: visible;
+    animation-duration: 0.7s;
+    animation-delay: 0.05s;
+    animation-name: fadeInUp;
+    .image_pc {
+      @media screen and (min-width: 1080px) {
+        display: block;
+      }
+      @media screen and (max-width: 1079px) {
+        display: none;
+      }
+    }
+    .image_mb {
+      @media screen and (min-width: 1080px) {
+        display: none;
+      }
+      @media screen and (max-width: 1079px) {
+        display: block;
       }
     }
   }
