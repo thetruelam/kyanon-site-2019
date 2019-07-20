@@ -4,85 +4,79 @@ import styles from './styles.module.scss'
 
 const TwoPizzaSection5 = (props) => {
   const { data } = props;
-//   const subTitleArray = data.subTitle.split("<br />").length > 1 ? data.subTitle.split("<br />") : null;
-//   const contentLeftArray = data.leftContent.split("<br />").length > 1 ? data.leftContent.split("<br />") : null;
   return (
     <React.Fragment>
     <div className={`container ${styles.section5}`}>
     <div className="row justify-content-center">
-      <div className={`col-xl-12 ${styles.title}`}>
-        THE SCRUM TEAM
-      </div>
-      <div className={`col-xl-12 ${styles.sub_title}`}>
-        WE ARE PROUD OF
-      </div>
+    {data.title!=="#"?<div className={`col-xl-12 ${styles.title}`}>
+        {data.title}
+      </div>:<></>}
+      {data.subTitle!=="#"?  <div className={`col-xl-12 ${styles.sub_title}`}>
+        {data.subTitle}
+      </div>:<></>}
       <div className={`col-xl-4 ${styles.content_left}`}>
-      <span>HIKAMI</span>  
+      <span>{data.nameCompany}</span>  
       <br />
       <br />
-        SCRUM TEAM OF 9 CHAMPIONS
+        {data.titleCompany}
       </div>
       <div className={`col-xl-8 ${styles.content_right}`}>
-        A Swiss startup introduces The World’s First-ever Smart Bottle Opener which can instantly identify the Users, Time, Location and Brand of any crown capped bottle while it's being opened.
+        {data.detailCompany}
       </div>
 
       <div className={`col-xl-3 col-8 ${styles.scrum_team}`}>
         <div className={`${styles.scrum_item}`}>
           <div className={`${styles.scrum_title}`}>
-            Technology
+            {data.itemScrum1.title}
         </div>
           <div className={` ${styles.image_arrow}`}>
-            <img src="/static/two-pizza/arrow-bot.png" />
+            <img src={data.itemScrum1.imgPath} />
           </div>
           <div className={` ${styles.scrum_text}`}>
-            Internet of Things, Image
-            Recognition, Big Data, Machine
-            Learning and Mobile
-            Application
+          {data.itemScrum1.detail}
           </div>
         </div>
 
         <div className={`${styles.scrum_item}`}>
           <div className={`${styles.scrum_title}`}>
-            Tech Stack
+          {data.itemScrum2.title}
         </div>
           <div className={` ${styles.image_arrow}`}>
-            <img src="/static/two-pizza/arrow-bot.png" />
+            <img src={data.itemScrum2.imgPath} />
           </div>
           <div className={` ${styles.scrum_text}`}>
-            React Native, PHP, Python,
-            C++, Java, Objective-C, NoSQL,
-            aImage Vision
+          {data.itemScrum1.detail}
           </div>
         </div>
       </div>
       <div className={`col-xl-6 col-8 ${styles.scrum_team}`}>
         <div className={`${styles.scrum_item}`}>
           <div className={`${styles.scrum_title}`}>
-            Structure of the team
+          {data.itemScrum3.title}
         </div>
           <div className={` ${styles.image_arrow}`}>
-            <img src="/static/two-pizza/arrow-bot.png" />
+            <img src={data.itemScrum3.imgPath} />
           </div>
           <div className={` ${styles.scrum_image}`}>
-            <img className={`${styles.image_pc}`} src="/static/two-pizza/hakami-team.png" />
-            <img className={`${styles.image_mb}`} src="/static/two-pizza/hakami-team-mb.png" />
+            <img className={`${styles.image_pc}`} src={data.itemScrum3.imgHakamiTeam} />
+            <img className={`${styles.image_mb}`} src={data.itemScrum3.imgHakamiTeam2} />
           </div>
         </div>
       </div>
       <div className={`col-xl-3 col-8 ${styles.scrum_team}`}>
         <div className={`${styles.scrum_item}`}>
           <div className={`${styles.scrum_title}`}>
-            Product Introduction
+          {data.itemScrum4.title}
         </div>
           <div className={` ${styles.image_arrow}`}>
-            <img src="/static/two-pizza/arrow-bot.png" />
+            <img src={data.itemScrum4.imgPath} />
           </div>
           <div className={` ${styles.scrum_image_video}`}>
-            <img src="/static/two-pizza/video-ic.png" />
+            <img src={data.itemScrum4.imgVideo} />
           </div>
-          <a href="https://youtu.be/Y8De6_J2nZ0" class={`${styles.button_play}`} target="_blank">Play
-                <img src="/static/two-pizza/play-ic.png" alt="play icon" />
+          <a href={data.itemScrum4.urlVideo} class={`${styles.button_play}`} target="_blank">
+                {data.itemScrum4.textPlay}
+               {data.itemScrum4.imgPlay!=="#"?<img src={data.itemScrum4.imgPlay} alt="play icon" />:<></>} 
           </a>
         </div>
       </div>
