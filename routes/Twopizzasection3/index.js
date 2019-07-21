@@ -1,24 +1,14 @@
 
 import React, { useState, useEffect } from 'react'
 import styles from './styles.module.scss'
-
+import BreadHeader from "../../components/BreadPizzaPage";
 const TwoPizzaSection3 = (props) => {
   const { data } = props;
-  const subTitleArray = data.subTitle.split("<br />").length > 1 ? data.subTitle.split("<br />") : null;
   return (
     <React.Fragment>
       <div className={`container ${styles.section3}`}>
         <div className="row justify-content-center">
-          <div className={`col-xl-12 ${styles.title}`}>
-            {data.title}
-          </div>
-          <div className={`col-xl-12 ${styles.sub_title}`}>
-            {subTitleArray && subTitleArray.length > 0 ? subTitleArray.map((item, index) => {
-              return (
-                <span key={index}>{item} <br /> </span>
-              )
-            }) : (<span>{data.subTitle}</span>)}
-          </div>
+        <BreadHeader title={data.title} subTitle={data.subTitle} />
           {data.listBuild && data.listBuild.length > 0 && data.listBuild.map((item, index) => {
             const contentArray = item.content.split("<br />").length > 1 ? item.content.split("<br />") : null;
             return (

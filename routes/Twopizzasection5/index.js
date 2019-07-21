@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react'
 import styles from './styles.module.scss'
+import BreadHeader from "../../components/BreadPizzaPage";
 
 const TwoPizzaSection5 = (props) => {
   const { data } = props;
@@ -8,12 +9,8 @@ const TwoPizzaSection5 = (props) => {
     <React.Fragment>
       <div className={`container ${styles.section5}`}>
         <div className="row justify-content-center">
-          <div className={`col-xl-12 ${styles.title}`}>
-            {data.title}
-          </div>
-          <div className={`col-xl-12 ${styles.sub_title}`}>
-            {data.subTitle}
-          </div>
+          <BreadHeader title={data.title} subTitle={data.subTitle} />
+          
           {data.listCompany && data.listCompany.length > 0 && data.listCompany.map((item, index) => {
             return (
               <div className="container">

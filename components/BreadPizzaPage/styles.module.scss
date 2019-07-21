@@ -1,0 +1,68 @@
+.title {
+  display: block;
+  background: -moz-linear-gradient(left, #ec1c24 0%, #3a1f46 10%);
+  background: linear-gradient(to right, #ec1c24 0%, #3a1f46 10%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  overflow: hidden;
+  font-size: 30px;
+  font-family: Geo-BA;
+  text-transform: uppercase;
+  font-weight: bold;
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 10px;
+    width: 80px;
+    background-color: #ec1c24;
+    position: absolute;
+    top: 37%;
+    right: 0;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    z-index: 1;
+  }
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    background: -moz-linear-gradient(left, #3a1f46 0%, #ec1c24 100%);
+    background: linear-gradient(to right, #3a1f46 0%, #ec1c24 100%);
+    height: 3px;
+    margin-right: -100%;
+    top: -6px;
+    position: relative;
+    margin-left: 30px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 20px;
+  }
+ 
+}
+.sub_title {
+  visibility: visible;
+  animation-duration: 0.5s;
+  animation-delay: 0.01s;
+  animation-name: fadeIn;
+  font-size: 45px;
+  color: #ec1c24;
+  margin: 7px 0 0 0;
+  padding-bottom: 30px;
+  line-height: 50px;
+  font-weight: bold;
+  &:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 8px;
+    background-color: red;
+    margin: 23px 0 0 0;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
