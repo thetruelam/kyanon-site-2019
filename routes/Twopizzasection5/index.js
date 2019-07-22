@@ -9,8 +9,7 @@ const TwoPizzaSection5 = (props) => {
     <React.Fragment>
       <div className={`container ${styles.section5}`}>
         <div className="row justify-content-center">
-          <BreadHeader title={data.title} subTitle={data.subTitle} />
-          
+          <BreadHeader title={data.title} subTitle={data.subTitle} />        
           {data.listCompany && data.listCompany.length > 0 && data.listCompany.map((item, index) => {
             return (
               <div className="container">
@@ -25,7 +24,7 @@ const TwoPizzaSection5 = (props) => {
                     {item.detailCompany}
                   </div>
 
-                  <div className={`col-xl-3 col-8 ${styles.scrum_team}`}>
+                  <div className={`col-xl-3 col-12 ${styles.scrum_team}`}>
                     <div className={`${styles.scrum_item}`}>
                       <div className={`${styles.scrum_title}`}>
                         {item.itemScrum1.title}
@@ -50,7 +49,7 @@ const TwoPizzaSection5 = (props) => {
                       </div>
                     </div>
                   </div>
-                  <div className={`col-xl-6 col-8 ${styles.scrum_team}`}>
+                  <div className={`col-xl-6 col-12 ${styles.scrum_team}`}>
                     <div className={`${styles.scrum_item}`}>
                       <div className={`${styles.scrum_title}`}>
                         {item.itemScrum3.title}
@@ -64,7 +63,7 @@ const TwoPizzaSection5 = (props) => {
                       </div>
                     </div>
                   </div>
-                  <div className={`col-xl-3 col-8 ${styles.scrum_team}`}>
+                  <div className={`col-xl-3 col-12 ${styles.scrum_team}`}>
                     <div className={`${styles.scrum_item}`}>
                       <div className={`${styles.scrum_title}`}>
                         {item.itemScrum4.title}

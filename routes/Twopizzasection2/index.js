@@ -5,7 +5,7 @@ const TwoPizzaSection2 = (props) => {
   const { data } = props;
   return (
     <React.Fragment>
-      <div className="container-fluid">
+      <div className="container">
         <div className={`row justify-content-center ${styles.padding_row}`}>
           <div className={`col-xl-12 ${styles.title}`}>
             <h4>{data.title}</h4>
