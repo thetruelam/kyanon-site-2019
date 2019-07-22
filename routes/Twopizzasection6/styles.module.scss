@@ -1,0 +1,64 @@
+.section6 {
+    height: 100%;
+    padding-top: 75px;
+    @media screen and (max-width: 1079px) {
+      height: 100%;
+      padding-top: 40px;
+    }
+    .avatar_client {
+      text-align: center;
+    }
+    .information_client {
+      padding: 0 20px;
+      .name_client {
+        font-size: 25px;
+        font-family: Monst-B;
+        color: #08154f;
+        font-weight: 700;
+      }
+      .position_client {
+        font-size: 15px;
+        font-family: Monst-M;
+        color: #08154f;
+        div {
+          font-size: 14px;
+        }
+        padding-bottom: 15px;
+      }
+      .description_client {
+        position: relative;
+        &:before {
+          left: -60px;
+          top: 3px;
+          content: "";
+          background: url("/static/two-pizza/nhay.png") no-repeat center/cover;
+          width: 42px;
+          height: 34px;
+          position: absolute;
+          @media screen and (max-width:1079px) {
+            display: none;
+          }
+        }
+        &:after {
+          webkit-transform: rotateY(180deg);
+          -moz-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+          margin-left: 20px;
+          margin-top: 5px;
+          content: "";
+          background: url("/static/two-pizza/nhay.png") no-repeat center/cover;
+          width: 42px;
+          height: 34px;
+          position: absolute;
+          @media screen and (max-width:1079px) {
+            display: none;
+          }
+        }
+        font-size: 15px;
+        font-family: Monst-SB;
+        line-height: 1.4;
+        font-weight: 700;
+      }
+    }
+  }
+  
