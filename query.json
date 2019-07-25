@@ -158,6 +158,10 @@
           {
             "clickUrl": "/contact-us",
             "text": "Contact Us"
+          },
+          {
+            "clickUrl": "/two-pizza",
+            "text": "Two Pizza"
           }
         ]
       }

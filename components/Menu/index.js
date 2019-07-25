@@ -46,12 +46,6 @@ const Menu = props => {
                   </Link>
                 </div>
               ))}
-            <div onClick={props.menuClose}>
-              <NewLink route="HomePage"><a className={styles.defaultA}><li className={styles.liItem}>Home page</li></a></NewLink>
-            </div>
-            <div onClick={props.menuClose}>
-              <NewLink route="ContactUs"><a className={styles.defaultA}> <li className={styles.liItem}>Contact us</li></a></NewLink>
-            </div>
           </ul>
         </div>
       </div>
